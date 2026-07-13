@@ -1,9 +1,20 @@
-function Navbar() {
+import "./Button.css";
+
+function Button({
+  children,
+  variant = "primary",
+  type = "button",
+  onClick,
+}) {
   return (
-    <nav>
-      Button
-    </nav>
+    <button
+      type={type}
+      className={`btn btn-${variant}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }
 
-export default Navbar;
+export default Button;

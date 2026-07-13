@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import "./Hero.css";
+import Button from "../Button/Button";
 
 function Hero() {
   return (
@@ -35,13 +36,13 @@ function Hero() {
 
           <div className="hero-buttons">
 
-            <button className="primary-btn">
-              Hire Me
-            </button>
+            <Button variant="primary">
+            Hire Me
+            </Button>
 
-            <button className="secondary-btn">
-              Download Resume
-            </button>
+            <Button variant="secondary">
+            Download Resume
+            </Button>
 
           </div>
 
