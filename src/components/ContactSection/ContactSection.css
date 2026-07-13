@@ -26,3 +26,24 @@
   resize: vertical;
   min-height: 180px;
 }
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: -0.6rem;
+}
+
+.success-message {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background: #dcfce7;
+  color: #166534;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contact-form input.error,
+.contact-form textarea.error {
+  border-color: #dc2626;
+}
