@@ -3,6 +3,7 @@ import About from "../../components/About/About";
 import SkillsSection from "../../components/SkillsSection/SkillsSection";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import ContactSection from "../../components/ContactSection/ContactSection";
+import NewsSection from "../../components/NewsSection/NewsSection";
 function Home() {
   return (
      <>
@@ -11,6 +12,7 @@ function Home() {
       <SkillsSection />
       <ProjectsSection />
       <ContactSection />
+      <NewsSection/>
     </>
   );
 }
