@@ -1,9 +1,18 @@
-function Navbar() {
+import "./SectionTitle.css";
+
+function SectionTitle({
+  title,
+  subtitle,
+}) {
   return (
-    <nav>
-      SectionTitle
-    </nav>
+    <div className="section-title">
+      <p>{subtitle}</p>
+
+      <h2>{title}</h2>
+
+      <div className="title-line"></div>
+    </div>
   );
 }
 
-export default Navbar;
+export default SectionTitle;
