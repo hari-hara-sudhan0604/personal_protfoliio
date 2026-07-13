@@ -1,8 +1,8 @@
 function Navbar() {
   return (
-    <nav>
-      Footer
-    </nav>
+    <footer>
+      <p>© 2026 Hari Portfolio. All Rights Reserved.</p>
+    </footer>
   );
 }
 
