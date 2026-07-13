@@ -1,6 +1,7 @@
 import Button from "../Button/Button";
 import "./ProjectCard.css";
-
+import Card from "../Card/Card";
+import Badge from "../Badge/Badge";
 function ProjectCard({
   title,
   description,
@@ -10,7 +11,7 @@ function ProjectCard({
   liveDemo,
 }) {
   return (
-    <article className="project-card">
+<Card className="project-card">
       <img
         src={image}
         alt={title}
@@ -24,12 +25,9 @@ function ProjectCard({
 
         <div className="tech-stack">
           {technologies.map((tech) => (
-            <span
-              key={tech}
-              className="tech-badge"
-            >
-              {tech}
-            </span>
+            <Badge key={tech}>
+            {tech}
+            </Badge>
           ))}
         </div>
 
@@ -51,7 +49,7 @@ function ProjectCard({
   </Button>
 </div>
       </div>
-    </article>
+    </Card>
   );
 }
 
