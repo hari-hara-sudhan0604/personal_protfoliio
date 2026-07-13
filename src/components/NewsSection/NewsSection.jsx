@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Card from "../Card/Card";
 import "./NewsSection.css";
-
+import { getPosts } from "../../services/api";
 function NewsSection() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,15 +11,7 @@ function NewsSection() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const response = await fetch(
-          "https://jsonplaceholder.typicode.com/posts?_limit=6"
-        );
-
-        if (!response.ok) {
-          throw new Error("Failed to fetch data.");
-        }
-
-        const data = await response.json();
+        const data = await getPosts();
 
         setPosts(data);
       } catch (err) {
