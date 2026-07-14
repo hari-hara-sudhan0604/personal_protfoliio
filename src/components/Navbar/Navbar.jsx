@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="navbar">
       <div className="container navbar-container">
@@ -11,36 +13,51 @@ function Navbar() {
             <span>Hari</span> Portfolio
           </NavLink>
         </div>
-
+        <button
+    className="menu-btn"
+    onClick={() => setMenuOpen(!menuOpen)}
+>
+    ☰
+</button>
         {/* Navigation */}
         <nav>
-          <ul className="nav-links">
+<ul className={menuOpen? "nav-links open": "nav-links"}>            
             <li>
-              <NavLink to="/" end>
+              <NavLink to="/" className={({ isActive }) =>
+        isActive ? "nav-link active" : "nav-link"
+    }onClick={()=>setMenuOpen(false)}  end>
                 Home
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/about">
+              <NavLink to="/about" className={({ isActive }) =>
+        isActive ? "nav-link active" : "nav-link"
+    } onClick={()=>setMenuOpen(false)}>
                 About
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/skills">
+              <NavLink to="/skills" className={({ isActive }) =>
+        isActive ? "nav-link active" : "nav-link"
+    } onClick={()=>setMenuOpen(false)}>
                 Skills
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/projects">
+              <NavLink to="/projects" className={({ isActive }) =>
+        isActive ? "nav-link active" : "nav-link"
+    } onClick={()=>setMenuOpen(false)} >
                 Projects
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/contact">
+              <NavLink to="/contact" className={({ isActive }) =>
+        isActive ? "nav-link active" : "nav-link"
+    } onClick={()=>setMenuOpen(false)}>
                 Contact
               </NavLink>
             </li>
