@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Projects from "./pages/Projects/Projects";
 import Skills from "./pages/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route
+path="*"
+element={<NotFound/>}
+/>
         </Route>
       </Routes>
     </BrowserRouter>

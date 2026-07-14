@@ -1,8 +1,15 @@
+// import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SkillCard from "../../components/SkillCard/SkillCard";
+import SkillsSection from "../../components/SkillsSection/SkillsSection";
+
 function Skills() {
   return (
-    <div>
-      <h1>Skills Page</h1>
-    </div>
+    <section>
+      {/* <SectionTitle/> */}
+      <SkillCard/>
+      <SkillsSection/>
+    </section>
+    
   );
 }
 
