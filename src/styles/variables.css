@@ -42,6 +42,6 @@ sans-serif;
 
 --border-radius:14px;
 
---transition:0.3s ease;
+--transition:0.3s ease,box-shadow 0.3s ease;
 
 }

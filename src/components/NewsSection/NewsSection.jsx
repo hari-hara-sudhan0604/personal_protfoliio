@@ -3,6 +3,7 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import Card from "../Card/Card";
 import "./NewsSection.css";
 import { getPosts } from "../../services/api";
+import Skeleton from "../Skeleton/Skeleton";
 function NewsSection() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +29,11 @@ function NewsSection() {
     return (
       <section className="section">
         <div className="container">
-          <p>Loading latest posts...</p>
+          <>
+    <Skeleton />
+    <Skeleton />
+    <Skeleton />
+</>
         </div>
       </section>
     );

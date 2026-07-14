@@ -6,8 +6,10 @@ border-radius:var(--border-radius);
 
 font-weight:600;
 
-transition:var(--transition);
-
+transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 font-size:1rem;
 
 }
@@ -42,4 +44,15 @@ background:var(--primary-color);
 
 color:white;
 
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
+}
+
+.btn:active {
+    transform: scale(0.98);
 }
