@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+  console.log("Navbar Render");
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className="navbar">
