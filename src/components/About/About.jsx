@@ -1,76 +1,129 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
 import "./About.css";
+
+import personalInfo from "../../data/personalInfo";
 
 function About() {
   return (
-    <section className="section about">
-      <div className="container">
+    <section className="about section" id="about">
 
-        <SectionTitle
-          subtitle="Get To Know Me"
-          title="About Me"
-        />
+      <div className="section-header">
 
-        <div className="about-grid">
+        <h2>About Me</h2>
 
-          <div className="about-image">
+        <p>
+          Get to know me better
+        </p>
 
-            <img
-              src="https://placehold.co/450x500"
-              alt="Hari"
-            />
+      </div>
 
-          </div>
+      <div className="about-container">
 
-          <div className="about-content">
+        {/* LEFT */}
 
-            <h3>
-              Full Stack Developer
-            </h3>
+        <div className="about-content">
 
-            <p>
+          <h3>
+            Passionate Full Stack Developer
+          </h3>
 
-Lorem ipsum dolor sit amet,
-consectetur adipisicing elit.
+          <p>
 
-Replace this later with
-your real introduction.
+            {personalInfo.about}
 
-            </p>
+          </p>
 
-            <div className="about-cards">
+          <p>
 
-              <div className="about-card">
+            {personalInfo.careerGoal}
 
-                <h4>Experience</h4>
+          </p>
 
-                <p>Fresher</p>
+        </div>
 
-              </div>
+        {/* RIGHT */}
 
-              <div className="about-card">
+        <div className="about-strengths">
 
-                <h4>Projects</h4>
+          <h3>
+            Core Strengths
+          </h3>
 
-                <p>10+</p>
+          <div className="strength-grid">
 
-              </div>
+            {
 
-              <div className="about-card">
+              personalInfo.strengths.map((item)=>(
 
-                <h4>Location</h4>
+                <div
+                key={item}
+                className="strength-card"
+                >
 
-                <p>India</p>
+                  {item}
 
-              </div>
+                </div>
 
-            </div>
+              ))
+
+            }
 
           </div>
 
         </div>
 
       </div>
+      <div className="highlight-container">
+
+<div className="highlight-card">
+
+<h3>4 Months</h3>
+
+<p>
+
+Internship Experience
+
+</p>
+
+</div>
+
+<div className="highlight-card">
+
+<h3>6+</h3>
+
+<p>
+
+Professional Certificates
+
+</p>
+
+</div>
+
+<div className="highlight-card">
+
+<h3>SIH</h3>
+
+<p>
+
+Hackathon Finalist
+
+</p>
+
+</div>
+
+<div className="highlight-card">
+
+<h3>MERN + Flask</h3>
+
+<p>
+
+Technology Stack
+
+</p>
+
+</div>
+
+</div>
+
     </section>
   );
 }
