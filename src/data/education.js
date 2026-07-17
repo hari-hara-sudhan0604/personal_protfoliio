@@ -1,58 +1,73 @@
 const education = [
+  {
+    id: 1,
 
-{
-id:1,
+    duration: "2022 - 2026",
 
-institution:
-"Sri Ramakrishna Institute of Technology",
+    title: "Bachelor of Technology (Information Technology)",
 
-degree:
-"B.Tech Information Technology",
+    organization: "Sri Krishna College of Technology",
 
-duration:
-"2022 - 2026",
+    description:
+      "Currently pursuing B.Tech in Information Technology with a strong focus on Full Stack Development, Python, AI, Data Structures, and Software Engineering. Actively involved in technical projects, hackathons, and continuous learning.",
 
-score:
-"CGPA: 7.68"
+    grade: "CGPA: 8.xx",
 
-},
+    location: "Coimbatore, Tamil Nadu",
 
-{
+    highlights: [
+      "Full Stack Development",
+      "Python",
+      "Artificial Intelligence",
+      "Problem Solving"
+    ]
+  },
 
-id:2,
+  {
+    id: 2,
 
-institution:
-"C.S.I Higher Secondary School",
+    duration: "2020 - 2022",
 
-degree:
-"HSC",
+    title: "Higher Secondary Education",
 
-duration:
-"2022",
+    organization: "Your Higher Secondary School",
 
-score:
-"84.33%"
+    description:
+      "Completed Higher Secondary Education with Mathematics and Computer Science, building a strong academic foundation for engineering studies.",
 
-},
+    grade: "Percentage: XX%",
 
-{
+    location: "Tamil Nadu",
 
-id:3,
+    highlights: [
+      "Computer Science",
+      "Mathematics",
+      "Physics",
+      "Chemistry"
+    ]
+  },
 
-institution:
-"C.S.I Higher Secondary School",
+  {
+    id: 3,
 
-degree:
-"SSLC",
+    duration: "2019 - 2020",
 
-duration:
-"2020",
+    title: "Secondary School Education",
 
-score:
-"90.8%"
+    organization: "Your High School",
 
-}
+    description:
+      "Completed Secondary Education while developing interest in programming and technology.",
 
+    grade: "Percentage: XX%",
+
+    location: "Tamil Nadu",
+
+    highlights: [
+      "Science",
+      "Mathematics"
+    ]
+  }
 ];
 
 export default education;

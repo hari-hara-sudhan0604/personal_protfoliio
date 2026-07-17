@@ -1,45 +1,60 @@
 import "./TimelineCard.css";
 
 function TimelineCard({ item }) {
+  return (
+    <article className="timeline-card">
 
-    return (
+      <div className="timeline-dot"></div>
 
-        <article className="timeline-card">
+      <div className="timeline-content">
 
-            <div className="timeline-dot"></div>
+        <span className="timeline-date">
+          {item.duration}
+        </span>
 
-            <div className="timeline-content">
+        <h3>{item.title}</h3>
 
-                <span className="timeline-date">
+        <h4>{item.organization}</h4>
 
-                    {item.duration}
+        {item.location && (
+          <p className="timeline-location">
+            📍 {item.location}
+          </p>
+        )}
 
-                </span>
+        {item.grade && (
+          <p className="timeline-grade">
+            🎓 {item.grade}
+          </p>
+        )}
 
-                <h3>
+        <p className="timeline-description">
+          {item.description}
+        </p>
 
-                    {item.title}
+        {item.highlights && (
 
-                </h3>
+          <div className="timeline-tags">
 
-                <h4>
+            {item.highlights.map((tag) => (
 
-                    {item.organization}
+              <span
+                key={tag}
+                className="timeline-tag"
+              >
+                {tag}
+              </span>
 
-                </h4>
+            ))}
 
-                <p>
+          </div>
 
-                    {item.description}
+        )}
 
-                </p>
+      </div>
 
-            </div>
-
-        </article>
-
-    );
-
+    </article>
+  );
 }
 
 export default TimelineCard;
