@@ -86,9 +86,9 @@ import "./Hero.css";
 //import { FaArrowRight } from "react-icons/fa";
 import personalInfo from "../../data/personalInfo";
 import socialLinks from "../../data/socialLinks";
-
+import FadeUp from "../animations/FadeUp";
 import profileImage from "../../assets/images/profile.png";
-
+import FadeIn from "../animations/FadeIn";
 import {
   FaGithub,
   FaLinkedin,
@@ -102,7 +102,7 @@ function Hero() {
       <div className="hero-container">
 
         {/* LEFT CONTENT */}
-
+        <FadeUp>
         <div className="hero-content">
 
           <p className="hero-greeting">
@@ -180,11 +180,12 @@ function Hero() {
 
   ))}
 
-</div>
         </div>
+        </div>
+        </FadeUp>
 
         {/* RIGHT CONTENT */}
-
+<FadeIn>
 <div className="hero-image">
 
 <div className="profile-card">
@@ -223,7 +224,7 @@ className="stat-card"
 </div>
 
 </div>
-
+</FadeIn>
       </div>
     </section>
   );

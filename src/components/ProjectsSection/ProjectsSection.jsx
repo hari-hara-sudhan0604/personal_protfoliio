@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import projects from "../../data/projects";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
+import { motion } from "framer-motion";
+
+import { staggerContainer } from "../../utils/animationVariants";
 
 function ProjectsSection({
   showViewAllButton = true,
@@ -31,16 +34,28 @@ function ProjectsSection({
         </p>
 
       </div>
-
+      
       <div className="projects-grid">
+        <motion.div
 
+className="projects-grid"
+
+variants={staggerContainer}
+
+initial="hidden"
+
+whileInView="visible"
+
+viewport={{ once: true }}
+
+>
         {displayedProjects.map((project) => (
           <ProjectCard
             key={project.id}
             project={project}
           />
         ))}
-
+</motion.div>
       </div>
 
 {showViewAllButton && (

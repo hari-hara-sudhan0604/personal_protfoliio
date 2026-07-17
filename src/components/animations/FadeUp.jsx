@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
-import { fadeIn } from "../../utils/animationVariants";
+import { fadeUp } from "../../utils/animationVariants";
 
-function FadeIn({ children }) {
+function FadeUp({ children }) {
 
     return (
 
         <motion.div
 
-            variants={fadeIn}
+            variants={fadeUp}
 
             initial="hidden"
 
@@ -18,7 +18,7 @@ function FadeIn({ children }) {
 
                 once: true,
 
-                amount: 0.25,
+                amount: 0.2,
 
             }}
 
@@ -32,4 +32,4 @@ function FadeIn({ children }) {
 
 }
 
-export default FadeIn;
+export default FadeUp;

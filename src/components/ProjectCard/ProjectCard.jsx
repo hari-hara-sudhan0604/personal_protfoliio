@@ -58,9 +58,10 @@
 import "./ProjectCard.css";
 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-
+import FadeUp from "../animations/FadeUp";
 function ProjectCard({ project }) {
   return (
+    <FadeUp>
     <article className="project-card">
 
       <img
@@ -121,6 +122,7 @@ function ProjectCard({ project }) {
       </div>
 
     </article>
+    </FadeUp>
   );
 }
 
