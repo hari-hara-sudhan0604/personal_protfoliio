@@ -156,3 +156,89 @@ background:#2563eb;
 color:white;
 
 }
+.timeline-employment{
+
+margin-top:10px;
+
+font-weight:600;
+
+color:#2563eb;
+
+}
+
+.timeline-subheading{
+
+margin-top:25px;
+
+margin-bottom:12px;
+
+font-size:1rem;
+
+font-weight:600;
+
+color:#1e293b;
+
+}
+
+.timeline-achievements{
+
+margin-top:10px;
+
+padding-left:20px;
+
+color:#4b5563;
+
+line-height:1.9;
+
+}
+
+.timeline-achievements li{
+
+margin-bottom:8px;
+
+}
+/* Description List */
+
+.timeline-description-list{
+
+    margin-top:18px;
+
+    padding-left:22px;
+
+    line-height:1.9;
+
+    color:#4b5563;
+
+}
+
+.timeline-description-list li{
+
+    margin-bottom:10px;
+
+}
+
+/* Improve spacing */
+
+.timeline-tags{
+
+    margin-top:15px;
+
+    margin-bottom:20px;
+
+}
+
+.timeline-achievements{
+
+    margin-top:12px;
+
+    padding-left:22px;
+
+    line-height:1.9;
+
+}
+
+.timeline-achievements li{
+
+    margin-bottom:8px;
+
+}

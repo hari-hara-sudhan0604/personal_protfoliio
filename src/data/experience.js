@@ -11,13 +11,27 @@ role:
 "Program Analyst Trainee",
 
 duration:
-"June 2026",
+"Mar 2026 - June 2026",
 
 description:[
 "Completed four months internship.",
 "Worked on real-time enterprise tasks.",
 "Collaborated on software development projects."
-]
+],
+technologies: 
+[
+      "Python",
+      "Flask",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+achievements: [
+      "Built responsive web interfaces",
+      "Developed REST APIs using Flask",
+      "Worked with Git and GitHub",
+      "Collaborated in Agile environment"
+    ]
 
 },
 
@@ -46,7 +60,21 @@ description:[
 
 "Participated in multiple project phases."
 
-]
+],
+technologies: [
+      "Python",
+      "Flask",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+
+    achievements: [
+      "Built responsive web interfaces",
+      "Developed REST APIs using Flask",
+      "Worked with Git and GitHub",
+      "Collaborated in Agile environment"
+    ]
 
 },
 
@@ -69,7 +97,21 @@ description:[
 
 "Reached Final Round."
 
-]
+],
+technologies: [
+      "Python",
+      "Flask",
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+
+    achievements: [
+      "Built responsive web interfaces",
+      "Developed REST APIs using Flask",
+      "Worked with Git and GitHub",
+      "Collaborated in Agile environment"
+    ]
 
 }
 
