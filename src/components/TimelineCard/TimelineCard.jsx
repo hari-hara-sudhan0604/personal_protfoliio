@@ -68,6 +68,50 @@ function TimelineCard({ item }) {
 
         )}
 
+        {item.credentialId && (
+  <p className="timeline-credential">
+    <strong>Credential ID:</strong> {item.credentialId}
+  </p>
+)}
+{item.skills && (
+  <>
+    <h5 className="timeline-subheading">
+      Skills Acquired
+    </h5>
+
+    <div className="timeline-tags">
+
+      {item.skills.map((skill) => (
+
+        <span
+          key={skill}
+          className="timeline-tag"
+        >
+          {skill}
+        </span>
+
+      ))}
+
+    </div>
+  </>
+)}
+{item.certificateLink && (
+  <div className="timeline-actions">
+
+    <a
+      href={item.certificateLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn btn-outline"
+      aria-label={`View certificate for ${item.title}`}
+    >
+      View Certificate
+    </a>
+
+  </div>
+)}
+
+
         {/* Technologies */}
 
         {item.technologies && (

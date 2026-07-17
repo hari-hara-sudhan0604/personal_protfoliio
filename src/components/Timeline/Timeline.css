@@ -33,3 +33,28 @@ background:#2563eb;
 border-radius:50px;
 
 }
+.timeline-credential{
+
+    margin-top:18px;
+
+    color:#475569;
+
+    font-weight:500;
+
+}
+
+.timeline-actions{
+
+    margin-top:25px;
+
+}
+
+.timeline-actions .btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
