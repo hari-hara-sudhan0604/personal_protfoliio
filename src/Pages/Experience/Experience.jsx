@@ -4,9 +4,11 @@ import experience from "../../data/experience";
 
 import { Helmet } from "react-helmet-async";
 
+import AnimatedPage from "../../components/animations/AnimatedPage";
 function Experience(){
 
 return(
+    <AnimatedPage>
 
 <>
 
@@ -39,7 +41,7 @@ items={experience}
 />
 
 </>
-
+</AnimatedPage>
 );
 
 }

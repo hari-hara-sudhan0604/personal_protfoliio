@@ -1,9 +1,10 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import "./About.css";
 import { Helmet } from "react-helmet-async";
-
+import AnimatedPage from "../../components/animations/AnimatedPage";
 function About() {
   return (
+    <AnimatedPage>
     <section className="section about">
       <Helmet>
 
@@ -88,6 +89,7 @@ your real introduction.
 
       </div>
     </section>
+    </AnimatedPage>
   );
 }
 

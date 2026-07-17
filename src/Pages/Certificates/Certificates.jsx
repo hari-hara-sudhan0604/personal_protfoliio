@@ -3,9 +3,11 @@ import Timeline from "../../components/Timeline/Timeline";
 import certificates from "../../data/certificates";
 
 import { Helmet } from "react-helmet-async";
+import AnimatedPage from "../../components/animations/AnimatedPage"; 
 
 function Certificates() {
   return (
+    <AnimatedPage>
     <>
       <Helmet>
         <title>
@@ -24,6 +26,7 @@ function Certificates() {
         items={certificates}
       />
     </>
+    </AnimatedPage>
   );
 }
 

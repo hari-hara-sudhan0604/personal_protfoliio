@@ -1,10 +1,10 @@
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import { Helmet } from "react-helmet-async";
-
+import AnimatedPage from "../../components/animations/AnimatedPage";
 function Projects(){
 
 return(
-
+<AnimatedPage>
 <section>
 <Helmet>
 
@@ -27,7 +27,7 @@ content="Portfolio of Hari, MERN & Flask Developer."
     />
 
 </section>
-
+</AnimatedPage>
 )
 
 }

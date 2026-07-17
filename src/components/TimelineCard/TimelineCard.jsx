@@ -1,7 +1,8 @@
 import "./TimelineCard.css";
-
+import FadeUp from "../animations/FadeUp";
 function TimelineCard({ item }) {
   return (
+    <FadeUp>
     <article className="timeline-card">
 
       <div className="timeline-dot"></div>
@@ -168,6 +169,7 @@ function TimelineCard({ item }) {
       </div>
 
     </article>
+    </FadeUp>
   );
 }
 

@@ -6,10 +6,11 @@ import ContactSection from "../../components/ContactSection/ContactSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
 import FadeIn from "../../components/animations/FadeIn";
 import { Helmet } from "react-helmet-async";
-
+import AnimatedPage from "../../components/animations/AnimatedPage";
 
 function Home() {
   return (
+    <AnimatedPage>
      <>
       <Helmet>
 <meta property="og:title" content="Hari Portfolio" />
@@ -28,6 +29,7 @@ function Home() {
     <NewsSection/>
     </FadeIn>
     </>
+    </AnimatedPage>
   );
 }
 

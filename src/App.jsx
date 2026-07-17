@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route,useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Layout from "./components/Layout/Layout";
 import Skeleton from "./components/Skeleton/Skeleton";
+import { AnimatePresence } from "framer-motion";
 
 const Home = lazy(() => import("./Pages/Home/Home"));
 const About =lazy(()=> import ("./components/About/About"));
@@ -12,11 +13,14 @@ const NotFound =lazy(()=> import ("./Pages/NotFound/NotFound"));
 const Education = lazy(() =>import("./Pages/Education/Education"));
 const Experience = lazy(()=>import("./Pages/Experience/Experience"));
 const Certificates = lazy(() =>import("./Pages/Certificates/Certificates"));
+
 function App() {
+  const location=useLocation();
   return (
-    <BrowserRouter>
+    
       <Suspense fallback={<Skeleton/>}>
-      <Routes>
+      <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -29,8 +33,9 @@ function App() {
           <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
+      </AnimatePresence>
       </Suspense>
-    </BrowserRouter>
+
   );
 }
 

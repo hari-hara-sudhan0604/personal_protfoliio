@@ -3,9 +3,10 @@ import Timeline from "../../components/Timeline/Timeline";
 import education from "../../data/education";
 
 import { Helmet } from "react-helmet-async";
-
+import AnimatedPage from "../../components/animations/AnimatedPage";
 function Education() {
   return (
+    <AnimatedPage>
     <>
       <Helmet>
         <title>Education | Hari Portfolio</title>
@@ -22,6 +23,7 @@ function Education() {
         items={education}
       />
     </>
+    </AnimatedPage>
   );
 }
 

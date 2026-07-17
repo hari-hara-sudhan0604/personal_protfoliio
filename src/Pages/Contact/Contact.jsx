@@ -1,10 +1,11 @@
 import ContactSection from "../../components/ContactSection/ContactSection";
 import { Helmet } from "react-helmet-async";
-
+import AnimatedPage
+from "../../components/animations/AnimatedPage";
 function Contact(){
 
 return(
-
+<AnimatedPage>
 <section>
 <Helmet>
 
@@ -24,7 +25,7 @@ content="Portfolio of Hari, MERN & Flask Developer."
 <ContactSection/>
 
 </section>
-
+</AnimatedPage>
 )
 
 }

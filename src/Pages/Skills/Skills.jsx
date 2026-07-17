@@ -1,6 +1,6 @@
 import "./Skills.css";
 import skills from "../../data/skills";
-
+import AnimatedPage from "../../components/animations/AnimatedPage";
 import {
     FaHtml5,
     FaCss3Alt,
@@ -42,6 +42,7 @@ const iconMap = {
 
 function Skills() {
     return (
+      <AnimatedPage>
         <section className="skills section">
 
             <div className="section-header">
@@ -101,6 +102,7 @@ function Skills() {
             </div>
 
         </section>
+        </AnimatedPage>
     );
 }
 
