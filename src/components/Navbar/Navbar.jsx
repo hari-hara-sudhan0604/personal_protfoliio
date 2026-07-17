@@ -1,77 +1,117 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+
 import "./Navbar.css";
+
 import personalInfo from "../../data/personalInfo";
+import navigation from "../../data/navigation";
 
 function Navbar() {
-  console.log("Navbar Render");
-  const [menuOpen, setMenuOpen] = useState(false);
-  return (
-    <header className="navbar">
-      <div className="container navbar-container">
-        {/* Logo */}
-        <div className="logo">
-          <NavLink to="/">
-            <span>{personalInfo.shortName}</span> Portfolio
-          </NavLink>
-        </div>
-        <button
-    className="menu-btn"
-    onClick={() => setMenuOpen(!menuOpen)}
->
-    ☰
-</button>
-        {/* Navigation */}
-        <nav>
-<ul className={menuOpen? "nav-links open": "nav-links"}>            
-            <li>
-              <NavLink to="/" className={({ isActive }) =>
-        isActive ? "nav-link active" : "nav-link"
-    }onClick={()=>setMenuOpen(false)}  end>
-                Home
-              </NavLink>
-            </li>
 
-            <li>
-              <NavLink to="/about" className={({ isActive }) =>
-        isActive ? "nav-link active" : "nav-link"
-    } onClick={()=>setMenuOpen(false)}>
-                About
-              </NavLink>
-            </li>
+    const [menuOpen, setMenuOpen] = useState(false);
 
-            <li>
-              <NavLink to="/skills" className={({ isActive }) =>
-        isActive ? "nav-link active" : "nav-link"
-    } onClick={()=>setMenuOpen(false)}>
-                Skills
-              </NavLink>
-            </li>
+    const [scrolled, setScrolled] = useState(false);
 
-            <li>
-              <NavLink to="/projects" className={({ isActive }) =>
-        isActive ? "nav-link active" : "nav-link"
-    } onClick={()=>setMenuOpen(false)} >
-                Projects
-              </NavLink>
-            </li>
+    useEffect(() => {
 
-            <li>
-              <NavLink to="/contact" className={({ isActive }) =>
-        isActive ? "nav-link active" : "nav-link"
-    } onClick={()=>setMenuOpen(false)}>
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+        const handleScroll = () => {
 
-        <button className="resume-btn">
-          Resume
-        </button>
-      </div>
-    </header>
-  );
+            setScrolled(window.scrollY > 40);
+
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+
+            window.removeEventListener("scroll", handleScroll);
+
+        };
+
+    }, []);
+
+    return (
+
+        <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+
+            <div className="nav-container">
+
+                {/* Logo */}
+
+                <NavLink
+                    to="/"
+                    className="logo"
+                >
+
+                    <span>{personalInfo.shortName}</span>
+
+                    Portfolio
+
+                </NavLink>
+
+                {/* Desktop Navigation */}
+
+                <nav>
+
+                    <ul className="nav-links">
+
+                        {
+
+                            navigation.map((item) => (
+
+                                <li key={item.id}>
+
+                                    <NavLink
+                                        to={item.path}
+                                        className={({ isActive }) =>
+                                            isActive ? "active" : ""
+                                        }
+                                    >
+
+                                        {item.name}
+
+                                    </NavLink>
+
+                                </li>
+
+                            ))
+
+                        }
+
+                    </ul>
+
+                </nav>
+
+                {/* Resume */}
+
+                <a
+                    href={personalInfo.resume}
+                    download
+                    className="resume-btn"
+                >
+
+                    Resume
+
+                </a>
+
+                {/* Mobile Menu Button */}
+
+                <button
+                    className="menu-btn"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Open navigation menu"
+                >
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </header>
+
+    );
+
 }
 
 export default Navbar;
