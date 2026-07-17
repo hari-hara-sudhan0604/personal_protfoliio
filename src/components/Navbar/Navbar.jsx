@@ -30,85 +30,171 @@ function Navbar() {
 
     }, []);
 
+    useEffect(() => {
+
+  document.body.style.overflow = menuOpen
+    ? "hidden"
+    : "auto";
+
+  return () => {
+
+    document.body.style.overflow = "auto";
+
+  };
+
+}, [menuOpen]);
+
+useEffect(() => {
+
+  const handleKeyDown = (event) => {
+
+    if (event.key === "Escape") {
+
+      setMenuOpen(false);
+
+    }
+
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+
+    window.removeEventListener("keydown", handleKeyDown);
+
+  };
+
+}, []);
+
     return (
 
-        <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
+<header className={`navbar ${scrolled ? "scrolled" : ""}`}>
 
-            <div className="nav-container">
+  <div className="nav-container">
 
-                {/* Logo */}
+    {/* Logo */}
 
-                <NavLink
-                    to="/"
-                    className="logo"
-                >
+    <NavLink
+      to="/"
+      className="logo"
+    >
+      <span>{personalInfo.shortName}</span> Portfolio
+    </NavLink>
 
-                    <span>{personalInfo.shortName}</span>
+    {/* Desktop Navigation */}
 
-                    Portfolio
+    <nav className="desktop-nav">
 
-                </NavLink>
+      <ul className="nav-links">
 
-                {/* Desktop Navigation */}
+        {navigation.map((item) => (
 
-                <nav>
+          <li key={item.id}>
 
-                    <ul className="nav-links">
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                isActive ? "active" : ""
+              }
+            >
 
-                        {
+              {item.name}
 
-                            navigation.map((item) => (
+            </NavLink>
 
-                                <li key={item.id}>
+          </li>
 
-                                    <NavLink
-                                        to={item.path}
-                                        className={({ isActive }) =>
-                                            isActive ? "active" : ""
-                                        }
-                                    >
+        ))}
 
-                                        {item.name}
+      </ul>
 
-                                    </NavLink>
+    </nav>
 
-                                </li>
+    {/* Resume */}
 
-                            ))
+    <a
+      href={personalInfo.resume}
+      download
+      className="resume-btn"
+    >
 
-                        }
+      Resume
 
-                    </ul>
+    </a>
 
-                </nav>
+    {/* Hamburger */}
 
-                {/* Resume */}
+    <button
+      className="menu-btn"
+      onClick={() => setMenuOpen(true)}
+      aria-label="Open menu"
+    >
 
-                <a
-                    href={personalInfo.resume}
-                    download
-                    className="resume-btn"
-                >
+      ☰
 
-                    Resume
+    </button>
 
-                </a>
+  </div>
 
-                {/* Mobile Menu Button */}
+  {/* Overlay */}
 
-                <button
-                    className="menu-btn"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                    aria-label="Open navigation menu"
-                >
+  {menuOpen && (
 
-                    ☰
+    <div
+      className="mobile-overlay"
+      onClick={() => setMenuOpen(false)}
+    />
 
-                </button>
+  )}
 
-            </div>
+  {/* Mobile Drawer */}
 
-        </header>
+  <aside className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+
+    <button
+      className="close-btn"
+      onClick={() => setMenuOpen(false)}
+      aria-label="Close menu"
+    >
+
+      ✕
+
+    </button>
+
+    <ul>
+
+      {navigation.map((item) => (
+
+        <li key={item.id}>
+
+          <NavLink
+            to={item.path}
+            onClick={() => setMenuOpen(false)}
+          >
+
+            {item.name}
+
+          </NavLink>
+
+        </li>
+
+      ))}
+
+    </ul>
+
+    <a
+      href={personalInfo.resume}
+      download
+      className="resume-btn mobile-resume"
+    >
+
+      Download Resume
+
+    </a>
+
+  </aside>
+
+</header>
 
     );
 
