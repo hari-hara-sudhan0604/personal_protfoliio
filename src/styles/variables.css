@@ -44,4 +44,71 @@ sans-serif;
 
 --transition:0.3s ease,box-shadow 0.3s ease;
 
+--bg:#ffffff;
+
+--surface:#f8fafc;
+
+--surface-color:#ffffff;
+
+--card-background:#ffffff;
+
+--section-background:#ffffff;
+
+--hero-background:linear-gradient(135deg, #f8fbff, #eef4ff);
+
+--text:#111827;
+
+--text-primary:#0F172A;
+
+--text-secondary:#475569;
+
+--text-light:#64748b;
+
+--link-color:#1e293b;
+
+--primary:#2563eb;
+
+--primary-color:#2563EB;
+
+--primary-hover:#1D4ED8;
+
+--github-button-bg:#111827;
+
+--github-button-hover:#0f172a;
+
+--tech-badge-bg:#22c55e;
+
+--tech-badge-text:#111827;
+
+--border-color:#E2E8F0;
+
+}
+
+[data-theme="dark"]{
+
+  --background-color:#0f172a;
+  --surface-color:#1e293b;
+  --card-background:#1e293b;
+  --section-background:#0f172a;
+  --hero-background:linear-gradient(135deg, #0f172a, #111827);
+
+  --text:#f8fafc;
+  --text-primary:#f8fafc;
+  --text-secondary:#cbd5e1;
+  --text-light:#94a3b8;
+  --link-color:#e2e8f0;
+
+  --border-color:#334155;
+  --primary-color:#60a5fa;
+  --primary-hover:#3b82f6;
+  --github-button-bg:#111827;
+  --github-button-hover:#0f172a;
+  --tech-badge-bg:#22c55e;
+  --tech-badge-text:#111827;
+
+  --bg:#0f172a;
+  --surface:#1e293b;
+  --primary:#60a5fa;
+  --card:#1e293b;
+
 }

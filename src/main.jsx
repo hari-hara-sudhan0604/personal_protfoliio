@@ -3,11 +3,14 @@ import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./styles/global.css";
 import App from "./App";
+import { ThemeProvider } from "./context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <ThemeProvider>
+        <App/>
+      </ThemeProvider>
     </HelmetProvider>
   </React.StrictMode>
 );

@@ -5,6 +5,7 @@ import "./Navbar.css";
 
 import personalInfo from "../../data/personalInfo";
 import navigation from "../../data/navigation";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 function Navbar() {
 
@@ -111,7 +112,7 @@ useEffect(() => {
     </nav>
 
     {/* Resume */}
-
+        <ThemeToggle />
     <a
       href={personalInfo.resume}
       download
