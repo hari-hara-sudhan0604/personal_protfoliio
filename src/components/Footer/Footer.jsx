@@ -1,7 +1,12 @@
+import personalInfo from "../../data/personalInfo";
 function Navbar() {
   return (
     <footer>
-      <p>© 2026 Hari Portfolio. All Rights Reserved.</p>
+      <p>© {new Date().getFullYear()}
+
+{personalInfo.name}
+
+All Rights Reserved.</p>
     </footer>
   );
 }

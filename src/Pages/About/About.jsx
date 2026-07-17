@@ -1,9 +1,25 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import "./About.css";
+import { Helmet } from "react-helmet-async";
 
 function About() {
   return (
     <section className="section about">
+      <Helmet>
+
+<title>
+About | Hari Portfoio
+</title>
+
+<meta
+
+name="description"
+
+content="Portfolio of Hari, MERN & Flask Developer."
+
+/>
+
+</Helmet>
       <div className="container">
 
         <SectionTitle

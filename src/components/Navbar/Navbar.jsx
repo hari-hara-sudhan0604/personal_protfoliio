@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import personalInfo from "../../data/personalInfo";
 
 function Navbar() {
   console.log("Navbar Render");
@@ -11,7 +12,7 @@ function Navbar() {
         {/* Logo */}
         <div className="logo">
           <NavLink to="/">
-            <span>Hari</span> Portfolio
+            <span>{personalInfo.shortName}</span> Portfolio
           </NavLink>
         </div>
         <button

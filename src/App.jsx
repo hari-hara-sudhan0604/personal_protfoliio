@@ -4,7 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Skeleton from "./components/Skeleton/Skeleton";
 
 const Home = lazy(() => import("./pages/Home/Home"));
-const About =lazy(()=> import ("./pages/About/About"));
+const About =lazy(()=> import ("./components/About/About"));
 const Projects = lazy(() => import("./pages/Projects/Projects"));
 const Skills =lazy(()=> import ("./pages/skills/Skills"));
 const Contact = lazy(() => import("./pages/Contact/Contact"));
