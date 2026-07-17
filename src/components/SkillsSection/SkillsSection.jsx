@@ -9,24 +9,25 @@ function SkillsSection() {
   return (
     <section className="section">
       <div className="container">
-
-        <SectionTitle
-          subtitle="Technologies"
-          title="My Skills"
-        />
+        <SectionTitle subtitle="Technologies" title="My Skills" />
 
         <div className="skills-grid">
+          {skills.map((category) => (
+            <div key={category.category} className="skill-category">
+              <h3>{category.category}</h3>
 
-          {skills.map((skill) => (
-            <SkillCard
-              key={skill.id}
-              title={skill.title}
-              level={skill.level}
-            />
+              <div className="skill-list">
+                {category.items.map((skill) => (
+                  <SkillCard
+                    key={skill.name}
+                    title={skill.name}
+                    level={`${skill.level}%`}
+                  />
+                ))}
+              </div>
+            </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

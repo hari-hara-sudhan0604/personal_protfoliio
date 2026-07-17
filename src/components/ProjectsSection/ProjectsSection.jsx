@@ -1,35 +1,59 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
-import ProjectCard from "../ProjectCard/ProjectCard";
+import "./ProjectsSection.css";
+
+import { Link } from "react-router-dom";
 
 import projects from "../../data/projects";
 
-import "./ProjectsSection.css";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
-function ProjectsSection() {
+function ProjectsSection({
+  showViewAllButton = true,
+  featuredOnly = true,
+}) {
+  const displayedProjects = featuredOnly
+  ? projects.filter((project) => project.featured)
+  : projects;
+
   return (
-    <section className="section">
-      <div className="container">
+    <section className="projects-section section" id="projects">
 
-        <SectionTitle
-          subtitle="My Work"
-          title="Featured Projects"
-        />
+      <div className="section-header">
 
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              image={project.image}
-              github={project.github}
-              liveDemo={project.liveDemo}
-            />
-          ))}
-        </div>
+        <span className="section-tag">
+          MY WORK
+        </span>
+
+        <h2>Featured Projects</h2>
+
+        <p>
+          A selection of projects that showcase my skills in
+          Full Stack Development, problem-solving, and modern web technologies.
+        </p>
 
       </div>
+
+      <div className="projects-grid">
+
+        {displayedProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+          />
+        ))}
+
+      </div>
+
+{showViewAllButton && (
+  <div className="projects-button">
+    <Link
+      to="/projects"
+      className="btn"
+    >
+      View All Projects
+    </Link>
+  </div>
+)}
+
     </section>
   );
 }

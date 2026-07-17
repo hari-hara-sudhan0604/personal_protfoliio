@@ -3,12 +3,12 @@ import { lazy, Suspense } from "react";
 import Layout from "./components/Layout/Layout";
 import Skeleton from "./components/Skeleton/Skeleton";
 
-const Home = lazy(() => import("./pages/Home/Home"));
+const Home = lazy(() => import("./Pages/Home/Home"));
 const About =lazy(()=> import ("./components/About/About"));
-const Projects = lazy(() => import("./pages/Projects/Projects"));
-const Skills =lazy(()=> import ("./pages/skills/Skills"));
-const Contact = lazy(() => import("./pages/Contact/Contact"));
-const NotFound =lazy(()=> import ("./pages/NotFound/NotFound"));
+const Projects = lazy(() => import("./Pages/Projects/Projects"));
+const Skills =lazy(()=> import ("./Pages/Skills/Skills"));
+const Contact = lazy(() => import("./Pages/Contact/Contact"));
+const NotFound =lazy(()=> import ("./Pages/NotFound/NotFound"));
 
 function App() {
   return (

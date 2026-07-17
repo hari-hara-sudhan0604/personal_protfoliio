@@ -1,6 +1,6 @@
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
-import SkillsSection from "../../components/SkillsSection/SkillsSection";
+import Skills from "../../Pages/Skills/Skills";
 import ProjectsSection from "../../components/ProjectsSection/ProjectsSection";
 import ContactSection from "../../components/ContactSection/ContactSection";
 import NewsSection from "../../components/NewsSection/NewsSection";
@@ -21,7 +21,7 @@ function Home() {
 </Helmet>
       <Hero />
       <About />
-      <SkillsSection />
+      <Skills />
       <ProjectsSection />
       <ContactSection />
       <FadeIn>

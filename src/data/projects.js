@@ -1,78 +1,53 @@
 const projects = [
   {
     id: 1,
-    title: "Expense Tracker",
+
+    title: "AI Resume Analyzer",
+
     description:
-      "A full-stack expense management application with user authentication and expense analytics.",
+      "Analyzes resumes using Flask and NLP to provide ATS-friendly feedback.",
+
+    image: "/project-placeholder.png",
 
     technologies: [
       "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
+      "Flask",
+      "Python",
+      "MongoDB"
     ],
 
-    image:
-      "https://placehold.co/600x400?text=Expense+Tracker",
+    github: "https://github.com/yourusername/project",
 
-    github:
-      "#",
-
-    liveDemo:
-      "#",
+    liveDemo: "https://example.vercel.app",
 
     featured: true,
+
+    status: "Completed",
   },
 
   {
     id: 2,
+
     title: "Personal Portfolio",
 
     description:
-      "Responsive portfolio website showcasing projects, skills and achievements.",
+      "Responsive portfolio built using React with reusable components and modern UI.",
+
+    image: "/project-placeholder.png",
 
     technologies: [
       "React",
-      "Vite",
       "CSS",
+      "Vite"
     ],
 
-    image:
-      "https://placehold.co/600x400?text=Portfolio",
+    github: "https://github.com/yourusername/portfolio",
 
-    github:
-      "#",
-
-    liveDemo:
-      "#",
+    liveDemo: "https://example.vercel.app",
 
     featured: true,
-  },
 
-  {
-    id: 3,
-
-    title: "Weather Dashboard",
-
-    description:
-      "Weather application using external APIs with live forecasts and responsive UI.",
-
-    technologies: [
-      "React",
-      "API",
-      "CSS",
-    ],
-
-    image:
-      "https://placehold.co/600x400?text=Weather+App",
-
-    github:
-      "#",
-
-    liveDemo:
-      "#",
-
-    featured: true,
+    status: "In Progress",
   },
 ];
 

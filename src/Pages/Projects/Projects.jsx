@@ -21,7 +21,10 @@ content="Portfolio of Hari, MERN & Flask Developer."
 />
 
 </Helmet>
-<ProjectsSection/>
+<ProjectsSection
+      featuredOnly={false}
+      showViewAllButton={false}
+    />
 
 </section>
 

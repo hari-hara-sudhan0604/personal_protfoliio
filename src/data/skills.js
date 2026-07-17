@@ -1,33 +1,42 @@
 const skills = [
   {
-    id: 1,
-    title: "HTML5",
-    level: "Advanced",
+    category: "Frontend",
+    items: [
+      { name: "HTML5", level: 95 },
+      { name: "CSS3", level: 90 },
+      { name: "JavaScript", level: 88 },
+      { name: "React", level: 90 },
+    ],
   },
+
   {
-    id: 2,
-    title: "CSS3",
-    level: "Advanced",
+    category: "Backend",
+    items: [
+      { name: "Node.js", level: 85 },
+      { name: "Express.js", level: 82 },
+      { name: "Flask", level: 80 },
+      { name: "MongoDB", level: 82 },
+    ],
   },
+
   {
-    id: 3,
-    title: "JavaScript",
-    level: "Intermediate",
+    category: "Programming",
+    items: [
+      { name: "Python", level: 90 },
+      { name: "Java", level: 75 },
+      { name: "C", level: 75 },
+    ],
   },
+
   {
-    id: 4,
-    title: "React",
-    level: "Intermediate",
-  },
-  {
-    id: 5,
-    title: "Node.js",
-    level: "Beginner",
-  },
-  {
-    id: 6,
-    title: "MongoDB",
-    level: "Beginner",
+    category: "Tools",
+    items: [
+      { name: "Git", level: 85 },
+      { name: "GitHub", level: 90 },
+      { name: "VS Code", level: 95 },
+      { name: "Postman", level: 82 },
+      { name: "Figma", level: 70 },
+    ],
   },
 ];
 
