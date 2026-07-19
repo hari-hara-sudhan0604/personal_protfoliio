@@ -1,5 +1,5 @@
 import "./Card.css";
-
+import { memo } from "react";
 function Card({
   children,
   className = "",
@@ -11,4 +11,4 @@ function Card({
   );
 }
 
-export default Card;
+export default memo(Card);

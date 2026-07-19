@@ -56,7 +56,7 @@
 // export default ProjectCard;
 
 import "./ProjectCard.css";
-
+import { memo } from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import FadeUp from "../animations/FadeUp";
 function ProjectCard({ project }) {
@@ -69,6 +69,7 @@ function ProjectCard({ project }) {
         alt={`${project.title} preview`}
         className="project-image"
         loading="lazy"
+        decoding="async"
       />
 
       <div className="project-content">
@@ -126,4 +127,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard;
+export default memo(ProjectCard);

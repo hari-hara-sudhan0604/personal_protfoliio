@@ -1,7 +1,7 @@
 import "./ProjectsSection.css";
 
 import { Link } from "react-router-dom";
-
+//import { memo } from "react";
 import projects from "../../data/projects";
 
 import ProjectCard from "../ProjectCard/ProjectCard";

@@ -1,7 +1,7 @@
 import Timeline from "../../components/Timeline/Timeline";
 
 import education from "../../data/education";
-
+import { memo } from "react";
 import { Helmet } from "react-helmet-async";
 import AnimatedPage from "../../components/animations/AnimatedPage";
 function Education() {
@@ -27,4 +27,4 @@ function Education() {
   );
 }
 
-export default Education;
+export default memo(Education);

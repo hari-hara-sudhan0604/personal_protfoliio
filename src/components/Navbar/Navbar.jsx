@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./Navbar.css";
-
+import { memo } from "react";
 import personalInfo from "../../data/personalInfo";
 import navigation from "../../data/navigation";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
@@ -201,4 +201,4 @@ useEffect(() => {
 
 }
 
-export default Navbar;
+export default memo(Navbar);

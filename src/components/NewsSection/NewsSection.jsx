@@ -4,6 +4,7 @@ import Card from "../Card/Card";
 import "./NewsSection.css";
 import { getPosts } from "../../services/api";
 import Skeleton from "../Skeleton/Skeleton";
+import { memo } from "react";
 function NewsSection() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -76,4 +77,4 @@ function NewsSection() {
   );
 }
 
-export default NewsSection;
+export default memo(NewsSection);

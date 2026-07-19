@@ -1,4 +1,5 @@
 import personalInfo from "../../data/personalInfo";
+import { memo } from "react";
 function Navbar() {
   return (
     <footer>
@@ -11,4 +12,4 @@ All Rights Reserved.</p>
   );
 }
 
-export default Navbar;
+export default memo(Navbar);

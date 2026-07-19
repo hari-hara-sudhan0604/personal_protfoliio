@@ -1,7 +1,7 @@
 import Timeline from "../../components/Timeline/Timeline";
 
 import certificates from "../../data/certificates";
-
+import { memo } from "react";
 import { Helmet } from "react-helmet-async";
 import AnimatedPage from "../../components/animations/AnimatedPage"; 
 
@@ -30,4 +30,4 @@ function Certificates() {
   );
 }
 
-export default Certificates;
+export default memo(Certificates);

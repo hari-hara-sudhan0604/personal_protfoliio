@@ -1,7 +1,7 @@
 import Timeline from "../../components/Timeline/Timeline";
 
 import experience from "../../data/experience";
-
+import { memo } from "react";
 import { Helmet } from "react-helmet-async";
 
 import AnimatedPage from "../../components/animations/AnimatedPage";
@@ -46,4 +46,4 @@ items={experience}
 
 }
 
-export default Experience;
+export default memo(Experience);

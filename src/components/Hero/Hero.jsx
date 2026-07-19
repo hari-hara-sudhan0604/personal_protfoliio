@@ -193,6 +193,7 @@ function Hero() {
 <img
 src={profileImage}
 alt="Harihara Sudhan"
+loading="lazy" decoding="async"
 />
 
 <div className="profile-status">
