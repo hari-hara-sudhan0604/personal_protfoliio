@@ -1,34 +1,38 @@
 import ContactSection from "../../components/ContactSection/ContactSection";
 import { Helmet } from "react-helmet-async";
-import AnimatedPage
-from "../../components/animations/AnimatedPage";
-function Contact(){
+import AnimatedPage from "../../components/animations/AnimatedPage";
+function Contact() {
+  return (
+    <AnimatedPage>
+      <section>
+        <Helmet>
+          <title>Contact | Hari Portfolio</title>
 
-return(
-<AnimatedPage>
-<section>
-<Helmet>
+          <meta
+            name="description"
+            content="Portfolio of Hari, MERN & Flask Developer."
+          />
+          <meta property="og:title" content="Hari Portfolio" />
+          <meta property="og:description" content="Full Stack MERN Developer" />
+          <meta property="og:type" content="website" />
 
-<title>
-Contact | Hari Portfolio
-</title>
+          {/* <meta property="og:url"content="https://your-domain.vercel.app"/> */}
+          {/* <meta property="og:image"content="https://your-domain.vercel.app/preview.png"/> */}
+          <meta name="twitter:card" content="summary_large_image" />
 
-<meta
+          <meta name="twitter:title" content="Hari Portfolio" />
 
-name="description"
+          <meta name="twitter:description" content="MERN Developer" />
 
-content="Portfolio of Hari, MERN & Flask Developer."
-
-/>
-
-</Helmet>
-<ContactSection/>
-
-</section>
-</AnimatedPage>
-)
-
+          <meta
+            name="twitter:image"
+            content="https://your-domain.vercel.app/preview.png"
+          />
+        </Helmet>
+        <ContactSection />
+      </section>
+    </AnimatedPage>
+  );
 }
-
 
 export default Contact;
