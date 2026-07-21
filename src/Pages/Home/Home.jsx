@@ -41,9 +41,9 @@ function Home() {
         <Skills />
         <ProjectsSection />
         <ContactSection />
-        <FadeIn>
+        {/* <FadeIn>
           <NewsSection />
-        </FadeIn>
+        </FadeIn> */}
       </>
     </AnimatedPage>
   );
